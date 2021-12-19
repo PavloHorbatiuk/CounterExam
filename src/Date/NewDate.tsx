@@ -9,14 +9,11 @@ function NewDate() {
     let minutes = newData.getMinutes();
     let secundes = newData.getSeconds()
     count = secundes
-
-
-    // useEffect(()=>{setTimeout(()=>{setCount(count+1,)},1000)},[count])
-
     useEffect(() => {
         setTimeout(() => {
             setCount(count + 1)
         }, 1000)
+        return () => clearTimeout(count)
     }, [count]);
 
     // useEffect(() => {
