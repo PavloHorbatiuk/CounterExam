@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useState} from 'react' ;
 import s from './Counter.module.css'
+import NewDate from "../Date/NewDate";
 
 
 function Counter() {
@@ -30,26 +31,27 @@ function Counter() {
     }
     return (
         <div className={s.maincontainer}>
+          <div className={s.NewDate}> <h1> <NewDate/></h1></div>
             <div className={s.item}>
-                <div className={s.block1}>
-                    <div className={s.inputStyle1}>
-                        max value: <input type={"number"}
-                                          value={""}
-                                          onChange={maxValueChange}/>
-                        min value:<input type='number'
-                                         onChange={minValueChange}/>
-                    </div>
-                    <div className={s.setButton}>
-                        <button onClick={setNumber}>Set</button>
-                    </div>
+            <div className={s.block1}>
+                <div className={s.inputStyle1}>
+                    max value: <input type={"number"}
+                                      value={""}
+                                      onChange={maxValueChange}/>
+                    min value:<input type='number'
+                                     onChange={minValueChange}/>
                 </div>
-                <div className={s.block2}>
-                    <div className={`${s.sValue} ${error ? s.redNumber : ''}`}>{count}</div>
-                    <div className={s.inc_reset}>
-                        <button disabled={error} onClick={incCallback}>Inc</button>
-                        <button onClick={resetCallback}>Reset</button>
-                    </div>
+                <div className={s.setButton}>
+                    <button onClick={setNumber}>Set</button>
                 </div>
+            </div>
+            <div className={s.block2}>
+                <div className={`${s.sValue} ${error ? s.redNumber : ''}`}>{count}</div>
+                <div className={s.inc_reset}>
+                    <button disabled={error} onClick={incCallback}>Inc</button>
+                    <button onClick={resetCallback}>Reset</button>
+                </div>
+            </div>
             </div>
         </div>
     )

@@ -71,7 +71,8 @@
     padding: 10px;
     justify-content: center;
 }
-.redNumber{
+
+.redNumber {
     display: flex;
     border: 1px solid black;
     padding: 10px;
@@ -79,5 +80,9 @@
     color: red;
 }
 
+.NewDate {
+    display: flex;
+    align-self: self-start;
+}
 
 

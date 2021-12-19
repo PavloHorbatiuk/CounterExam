@@ -4,6 +4,7 @@ import s from './Counter/Counter.module.css'
 import Counter from "./Counter/Counter";
 
 function App() {
+    document.title="Counter"
     return (
         <div>
             <Counter/>
