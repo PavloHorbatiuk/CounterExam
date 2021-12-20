@@ -74,7 +74,7 @@
 
 .redNumber {
     display: flex;
-    border: 1px solid black;
+    border: 1px solid red;
     padding: 10px;
     justify-content: center;
     color: red;
@@ -84,5 +84,4 @@
     display: flex;
     align-self: self-start;
 }
-
 
