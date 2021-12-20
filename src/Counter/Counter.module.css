@@ -14,12 +14,13 @@
     border: 1px solid black;
     padding: 10px;
     justify-content: space-between;
+    background-color: cornsilk;
 
 }
 
 .block1 {
     display: inline-flex;
-    border: 2px solid crimson;
+    /*border: 2px solid;*/
     flex-direction: column;
     padding: 10px;
     justify-content: space-between;
@@ -49,10 +50,10 @@
 
 .block2 {
     display: flex;
-    border: 1px solid blueviolet;
+    /*border: 1px solid blueviolet;*/
     flex-direction: column;
     padding: 10px;
-    border: 2px solid crimson;
+    /*border: 2px solid;*/
     justify-content: space-between;
     height: 200px;
     width: 200px;
@@ -63,6 +64,7 @@
     border: 1px solid black;
     padding: 10px;
     justify-content: center;
+    background-color: white;
 }
 
 .inc_reset {
