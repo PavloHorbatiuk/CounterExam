@@ -9,6 +9,17 @@ function Counter() {
     const [error, setError] = useState(false)
     const [valueError, setValueError] = useState<number | string>(0)
 
+    const optimizatorDisableButton = (num: number) => {
+        num < 0 ? setError(true) : setError(false)
+    }
+    const optimizatorValueCode = (num1: number, num2: number) => {
+        num1 >= num2 ? setError(true) : setError(false);
+    }
+    const optimizatorErrorMessage = (num: number) => {
+        num < 0 ? setValueError("incorrect value") : setValueError("Press set to install value")
+    }
+
+
     useEffect(() => {
         getLocalStorageValue();
     }, [])
@@ -16,7 +27,7 @@ function Counter() {
     useEffect(() => {
         localStorage.setItem("maxValue", JSON.stringify(maxValue));
         localStorage.setItem("startNumber", JSON.stringify(startNumber));
-    }, [maxValue,startNumber]);
+    }, [maxValue, startNumber]);
 
     const getLocalStorageValue = () => {
         let storageStartValueAsString = localStorage.getItem("startNumber")
@@ -37,15 +48,17 @@ function Counter() {
         setCount(startNumber)
     }
     const maxValueChange = (e: ChangeEvent<HTMLInputElement>) => {
-        let inputValue = parseInt(e.currentTarget.value);
-        (inputValue < 0) ? setValueError("incorrect value") : setValueError("Press set to install value");
-        (inputValue < 0) ? setError(true) : setError(false)
-        setMaxValue(inputValue)
+        let inputMaxValue = parseInt(e.currentTarget.value);
+        optimizatorErrorMessage(inputMaxValue);
+        optimizatorDisableButton(inputMaxValue);
+        optimizatorValueCode(startNumber, inputMaxValue);
+        setMaxValue(inputMaxValue)
     };
     const startValueChange = (e: ChangeEvent<HTMLInputElement>) => {
         let startValue = parseInt(e.currentTarget.value);
-        (startValue < 0) ? setValueError("Incorrect value") : setValueError("Press set to install value");
-        (startValue < 0) ? setError(true) : setError(false)
+        optimizatorErrorMessage(startValue)
+        optimizatorDisableButton(startValue);
+        optimizatorValueCode(startValue, maxValue);
         setStartNumber(startValue)
 
     }
@@ -59,12 +72,11 @@ function Counter() {
     }
     return (
         <div className={s.maincontainer}>
-            {/*<div className={s.NewDate}><h1><NewDate/></h1></div>*/}
             <div className={s.item}>
                 <div className={s.block1}>
                     <div className={s.inputStyle1}>
                         Max value: <input
-                       value={maxValue}
+                        value={maxValue}
                         type="number"
                         onChange={maxValueChange}
                     />
