@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/CounterExam/static/css/main.6abeba6f.chunk.css",
-    "main.js": "/CounterExam/static/js/main.943efd0a.chunk.js",
-    "main.js.map": "/CounterExam/static/js/main.943efd0a.chunk.js.map",
+    "main.css": "/CounterExam/static/css/main.8992d5e5.chunk.css",
+    "main.js": "/CounterExam/static/js/main.75eff47f.chunk.js",
+    "main.js.map": "/CounterExam/static/js/main.75eff47f.chunk.js.map",
     "runtime-main.js": "/CounterExam/static/js/runtime-main.84373c03.js",
     "runtime-main.js.map": "/CounterExam/static/js/runtime-main.84373c03.js.map",
     "static/js/2.678b9c9b.chunk.js": "/CounterExam/static/js/2.678b9c9b.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.72fe968b.chunk.js": "/CounterExam/static/js/3.72fe968b.chunk.js",
     "static/js/3.72fe968b.chunk.js.map": "/CounterExam/static/js/3.72fe968b.chunk.js.map",
     "index.html": "/CounterExam/index.html",
-    "static/css/main.6abeba6f.chunk.css.map": "/CounterExam/static/css/main.6abeba6f.chunk.css.map",
+    "static/css/main.8992d5e5.chunk.css.map": "/CounterExam/static/css/main.8992d5e5.chunk.css.map",
     "static/js/2.678b9c9b.chunk.js.LICENSE.txt": "/CounterExam/static/js/2.678b9c9b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.84373c03.js",
     "static/js/2.678b9c9b.chunk.js",
-    "static/css/main.6abeba6f.chunk.css",
-    "static/js/main.943efd0a.chunk.js"
+    "static/css/main.8992d5e5.chunk.css",
+    "static/js/main.75eff47f.chunk.js"
   ]
 }
